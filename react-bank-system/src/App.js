@@ -4,7 +4,7 @@ import About from './Pages/About';
 import Homepage from './Pages/Homepage';
 import Triangle from "./Images/TriangleBank.png"
 import Customers from './Pages/Customers'
-import ContactUs from './Pages/ContactUs';
+import Contact from './Pages/Contact';
 import Customer from './Pages/Customer';
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
               <Customers/>
             </Route>
             <Route path="/contact">
-              <ContactUs/>
+              <Contact/>
             </Route>
             <Route exact path="/customers/:id">
               <Customer/>

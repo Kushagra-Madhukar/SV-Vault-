@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import "./Pages.css"
-import {getNews,getGoogleNews,getGNews} from '../newsApi'
+// import {getNews,getGoogleNews,getGNews} from '../newsApi'
 
 const Homepage = () => {   
     // const [input, setInput] = useState("")
