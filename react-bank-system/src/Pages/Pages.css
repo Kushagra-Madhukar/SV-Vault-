@@ -1,0 +1,232 @@
+/*================
+========App=======
+==================*/
+
+.web-head{
+    display: flex;
+    background-color: rgb(94, 128, 231);
+}
+
+.top-nav{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    /* padding: 1em; */
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    display: block;
+    height: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    /* background-color: salmon; */
+}
+
+.nav-list-item {
+    /* margin-left: 2em; */
+    font-weight: 700;
+    display: flex;
+    cursor: pointer;
+    height: 100%;
+    /* background-color: green; */
+    align-items: center;
+}
+
+.nav-list-item a {
+    text-decoration: none;
+    display: inline-block;
+    /* background-color: saddlebrown; */
+    height: 100%;
+    line-height: 50px;
+    padding: 0 2em;
+    text-align: center;
+    color: #f3f3f3;
+}
+
+.nav-list-item a:hover,
+.nav-list-item a:focus{
+    background-color: rgb(0, 162, 255);
+}
+
+/*=====================
+======Home page========
+=======================*/
+
+.hm-text-container{
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+.hm-main-btn{
+    border: none;
+    background-color: #c5ce21;
+    padding: 0.75em 1em;
+    color: #f3f3f3;
+    font-weight: 700;
+    font-size: 1.1rem;
+    outline: none;
+    margin-top: 2em;
+}
+
+.hm-main-btn:hover,
+.hm-main-btn:focus
+{
+    background-color: black;
+    cursor: pointer;
+}
+/*=====================
+=====Customers=========
+======================*/
+.customers-table-container{
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    margin-top: 2em;
+}
+
+.customer-table {
+    grid-column: 2 / 3;
+    border-collapse: collapse;
+}
+
+thead{
+    background: black;
+    color: white;
+}
+.customer-row{
+    /* padding: 1em 2em; */
+    height: 3em;
+    transition: transform 0.3s;
+    border-bottom: 1px solid #dddddd;
+}
+
+.customer-row:nth-child(odd){
+    background: #f3f3f3;
+}
+
+.customer-row:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background: limegreen;
+}
+
+.customer-link{
+    display: flex;
+    text-decoration: none;
+}
+
+/*======================================
+============Customer====================
+=======================================*/
+.cstm-holder {
+    background-color: #c5ce21;
+    padding: 1em;
+    display: block;
+    height: 100%;
+}
+
+.cstm-container{
+    display: flex;
+    padding: 4em;
+    height: 100%;
+    background-color: #c5ce21;
+    justify-content: space-evenly;
+    max-width: 1000px;
+    margin: 1em auto;
+}
+
+.cstm-img-container{
+   width: 350px;
+   height: 350px; 
+}
+
+.cstm-img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 2px solid silver;
+}
+
+.cstm-content-container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: coral;
+    padding: 2em;
+    width: 40%;
+}
+.cstm-content-container label{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.cstm-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cstm-form label {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.cstm-form label,
+.cstm-form button {
+    margin-top: 1em;
+}
+
+.cstm-btn{
+    border: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    color: #fff;
+    background-color:#c5ce21;
+    transition: all 0.5s;
+    margin: 3em auto 0;
+    outline: none;
+}
+
+.cstm-btn:hover,
+.cstm-btn:focus{
+    background-color: black;
+}
+
+.cstm-form input,
+.cstm-form select{
+    display: flex;
+    width: 30%;
+    max-width: 450px;
+    border-radius: 0;
+    border: 0.5px solid gray;
+    height: 1.25em;
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+}
+
+.cstm-form input:focus,
+.cstm-form select:focus{
+    border: 0.5px solid black;
+    outline: none;
+}
+
+.cstm-form select{
+    font-size: 1rem;
+}
+
+
+/* a{
+    width: 100%;
+    display: block;
+} */

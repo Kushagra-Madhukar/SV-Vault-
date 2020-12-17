@@ -1,0 +1,131 @@
+.contact-top-container{
+    background-color: rgba(21, 152, 226, 0.6);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2em 2em 4em;
+}
+
+.contacts-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.specific-type-contact{
+    flex: 1;
+    max-width: 340px;
+}
+
+.img-circle{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: inline-block;
+    background: rgba(175, 215, 238, 0.8);
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.5s;
+}
+.img-circle:hover,
+.img-circle:focus{
+    background-image: url('AI.JPG');
+    background-size: contain;
+    background-position: center;
+}
+
+.img-circle:hover i,
+.img-circle:focus i{
+    display: none;
+}
+
+.icon-class{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.contact-data-list{
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/*=======================================
+========Message and form=================
+=========================================*/
+
+.message-and-form-container{
+    display: flex;
+    text-align: start;
+    justify-content: space-evenly;
+    padding: 2em;
+}
+
+.message-container,
+.form-container{
+    flex: 1;
+}
+
+.message-container p {
+    line-height: 1.6em;
+}
+
+.form-container label{
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.form-container input,
+.form-container textarea{
+    display: flex;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 0;
+    border: 0.5px solid gray;
+    height: 1.5em;
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+}
+
+.form-container input:focus,
+.form-container textarea:focus{
+    border: 0.5px solid black;
+    outline: none;
+}
+
+.form-container,
+.message-container{
+    max-width: 500px;
+    margin: 0 1em;
+}
+
+.feedback-button{
+    border: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    color: #fff;
+    background-color:#c5ce21;
+    transition: all 0.5s;
+    margin-top: 1em;
+    outline: none;
+}
+
+.feedback-button:hover,
+.feedback-button:focus{
+    background-color: black;
+}
+
+@media (max-width: 700px){
+    .message-and-form-container{
+        flex-direction: column;
+    }
+    .contacts-container{
+        flex-direction: column;
+        align-items: center;
+    } 
+    .specific-type-contact{
+        margin-bottom: 4em;
+    }
+}
