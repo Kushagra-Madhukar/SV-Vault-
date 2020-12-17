@@ -21,4 +21,4 @@ const ceoSchema = new mongoose.Schema({
 
 })
 
-module.exports = mongoose.model('CEO', ceoSchema)
+module.exports = mongoose.model('user', ceoSchema)
