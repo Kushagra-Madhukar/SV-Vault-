@@ -12,7 +12,7 @@ const Customers = () => {
     useEffect(() => {
         
         const fetchData = async () => {
-            const {data} = await axios.get("http://sv-vault.herokuapp/customers")
+            const {data} = await axios.get("http://sv-vault.herokuapp.com/customers")
             setData(data)
             console.log(data)
             setLoad(true)

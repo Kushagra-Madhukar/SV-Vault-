@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div className="ab-div">
             <h2>About the project</h2>
-            <p className="ab-p">This project was made under the tasks given during the Sparks foundation web development internship in which a basic banking system using any tech stack was to be build. The current project has been built using the <strong>MERN</strong> stack.</p>
+            <p className="ab-p">This project was made by me in order to learn by applying the knowledge I got by doing courses, reading documentations and watching yt videos on web development especially the <strong>MERN</strong> stack using which this website has been made. Find more details about the tools used in this project below.</p>
             <h3>Frontend - </h3>
             <ol className="ab-ol">
                 <li><strong>ReactJS -</strong>Entirely based on functional components and hooks</li>

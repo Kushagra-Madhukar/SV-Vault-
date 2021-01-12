@@ -39,7 +39,7 @@ function App() {
             </Route>
           </Switch>
         </main>
-        <footer style={{backgroundColor: "khaki", position: "fixed", bottom: "0", width: "100%", padding: "0.5em"}}>
+        <footer style={{backgroundColor: "khaki", position: "fixed", bottom: "0", width: "100%", padding: "0.5em", marginTop:"1em"}}>
           <div>&copy; Copyright 2020 KushagraM :D</div>
         </footer>
     </div>
