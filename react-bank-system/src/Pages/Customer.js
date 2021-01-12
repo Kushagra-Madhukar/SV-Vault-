@@ -13,7 +13,7 @@ const Customer = () => {
             const fetchData = async () => {
                 //Getting customer data
                 // const {data} = await axios.get(`http://localhost:5000/api/customers`)
-                const {data} = await axios.get(`http://sv-vault.herokuapp.com/customers`)
+                const {data} = await axios.get(`https://sv-vault.herokuapp.com/customers`)
                 setData(data)
                 console.log(data)
                 const c = data.find(c => c.id === id);
@@ -34,8 +34,8 @@ const Customer = () => {
 
     
     const updateDatabase = async (x, rID) => {
-        const data1 = await axios.patch(`http://sv-vault.herokuapp.com/customers/${rID}`, {x: x, add: true})
-        const data2 = await axios.patch(`http://sv-vault.herokuapp.com/customers/${id}`, {x: x, add: false})
+        const data1 = await axios.patch(`https://sv-vault.herokuapp.com/customers/${rID}`, {x: x, add: true})
+        const data2 = await axios.patch(`https://sv-vault.herokuapp.com/customers/${id}`, {x: x, add: false})
         console.log(data1.data, data2.data)
         setUpdate(!update)
     }
