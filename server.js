@@ -24,14 +24,17 @@ con.on('open', () => {
 const ceoRouter = require('./routes/ceo')
 app.use('/api/customers', ceoRouter)
 
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('react-bank-system/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'react-bank-system', 'build', 'index.html')); // relative path
+    });
+}
+
 app.listen(PORT, () => {
     console.log(`Server started at port ${PORT} ...`)
 })
-
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('./react-bank-system/build'));
-}
-
 
 
 
