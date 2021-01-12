@@ -8,8 +8,8 @@ const Customer = () => {
     const [loaded, setLoaded] = useState(false)
     const [data, setData] = useState([])
     const [update, setUpdate] = useState(true)
-    useEffect(() => {
 
+    useEffect(() => {
             const fetchData = async () => {
                 //Getting customer data
                 const {data} = await axios.get("http://localhost:5000/api/customers")
@@ -18,10 +18,6 @@ const Customer = () => {
                 const c = data.find(c => c.id === id);
                 setCustomer(c)
                 setLoaded(true)
-
-                //Getting random user image from api
-                const imgData = await axios.get("https://randomuser.me/api/")
-                console.log(imgData.data.results)
             }
             fetchData()
             return() => {
@@ -98,3 +94,20 @@ const Customer = () => {
 }
 
 export default Customer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Getting random user image from api
+// const imgData = await axios.get("https://randomuser.me/api/")
+// console.log(imgData.data.results)

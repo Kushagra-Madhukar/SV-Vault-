@@ -1,8 +1,10 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const CONNECTION_URL = 'mongodb+srv://kushagra:kkkk1234@cluster0.qrese.mongodb.net/bankDB?retryWrites=true&w=majority';
-// process.env.MONGODB_URI || 
-// 'mongodb://localhost/VillainsDB'
+const dotenv = require('dotenv');
+dotenv.config();
+const CONNECTION_URL = `mongodb+srv://${process.env.user}:${process.env.password}@cluster0.qrese.mongodb.net/bankDB?retryWrites=true&w=majority`;
+
+
 const cors = require('cors')
 
 const app = express()
@@ -11,11 +13,7 @@ app.use(cors())
 
 PORT = process.env.PORT || 5000;
 mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true})
-    // .then(() => app.listen(PORT, () => console.log(`Server started at port ${PORT} ...`)))
-    // .catch((error) => console.log(error.message));
-
-// mongoose.set('useFindAndModify', false);
-// mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true})
+    
 const con = mongoose.connection
 
 con.on('open', () => {
@@ -36,3 +34,15 @@ if(process.env.NODE_ENV === 'production'){
 
 
 
+
+
+
+
+// process.env.MONGODB_URI || 
+// 'mongodb://localhost/VillainsDB'
+
+// .then(() => app.listen(PORT, () => console.log(`Server started at port ${PORT} ...`)))
+    // .catch((error) => console.log(error.message));
+
+// mongoose.set('useFindAndModify', false);
+// mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true})
