@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const dotenv = require('dotenv');
 dotenv.config();
 const CONNECTION_URL = `mongodb+srv://kushagra:kkkk1234@cluster0.qrese.mongodb.net/bankDB?retryWrites=true&w=majority`;
+const path = require('path')
 
 
 const cors = require('cors')

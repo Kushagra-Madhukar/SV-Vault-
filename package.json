@@ -6,11 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "cd react-bank-system && npm run build",
-    "install-client": "cd react-bank-system && npm install",
-    "heroku-postbuild": "npm install && npm run install-client && npm run build",
-    "client:build": "cd react-bank-system && npm run build",
-    "client": "cd react-bank-system && npm start"
+    "heroku-postbuild": "cd react-bank-system && npm install && npm run build"
   },
   "author": "Kushagra",
   "license": "ISC",
@@ -21,3 +17,6 @@
     "mongoose": "^5.11.7"
   }
 }
+
+
+    
