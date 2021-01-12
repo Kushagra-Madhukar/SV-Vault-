@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd react-bank-system && npm run build && cd .. && node server.js",
+    "build": "cd react-bank-system && npm run build",
     "install-client": "cd react-bank-system && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "heroku-postbuild": "npm install && npm run install-client && npm run build",
     "start": "node server.js",
     "client:build": "cd react-bank-system && npm run build",
     "client": "cd react-bank-system && npm start"
