@@ -1,4 +1,5 @@
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch, Link, useHistory } from 'react-router-dom';
+import React, {useState} from 'react'
 import './App.css';
 import About from './Pages/About';
 import Homepage from './Pages/Homepage';
@@ -8,16 +9,31 @@ import Contact from './Pages/Contact';
 import Customer from './Pages/Customer';
 
 function App() {
+
+  const history = useHistory()
+
+  const [burger, setBurger] = useState(false)
+  function clickHandler() {
+    setBurger(!burger)
+  }
   return (
     <div className="App">
       <header className="web-head">
             <div className="top-nav">
-                <img src={Triangle} className="logo-img"/>
-                <ul className="nav-list">
+                <img src={Triangle} className="logo-img" onClick={() => history.push("/")}/>
+                <ul className={"nav-list " + (burger? "nav-list-open" : "nav-list-close")}>
                     <li className="nav-list-item"><Link to = "/">Home</Link></li>
                     <li className="nav-list-item"><Link to = "/about">About</Link></li>
                     <li className="nav-list-item"><Link to = "/contact">Contact</Link></li>
                 </ul>
+                <div className={burger ? "burger burger-open" : "burger burger-close"} onClick={clickHandler}>
+                  <div/>
+                  <div/>
+                  <div/>
+                </div>
+                {/* <div className={burger ? "sidebar sidebar-open": "sidebar sidebar-closed"} style={{position: "fixed"}}>
+                  Hello
+                </div> */}
             </div>
         </header>
         <main style={{marginBottom: "2em"}}>
@@ -39,7 +55,7 @@ function App() {
             </Route>
           </Switch>
         </main>
-        <footer style={{backgroundColor: "khaki", position: "fixed", bottom: "0", width: "100%", padding: "0.5em"}}>
+        <footer style={{backgroundColor: "khaki", position: "fixed", bottom: "0", width: "100%", padding: "0.5em", zIndex: "50"}}>
           <div>&copy; Copyright 2020 KushagraM :D</div>
         </footer>
     </div>
