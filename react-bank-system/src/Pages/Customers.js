@@ -12,7 +12,9 @@ const Customers = () => {
     useEffect(() => {
         
         const fetchData = async () => {
+
             const {data} = await axios.get("/api/customers")
+
             setData(data)
             console.log(data)
             setLoad(true)
