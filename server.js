@@ -26,7 +26,7 @@ const ceoRouter = require('./routes/ceo')
 app.use('/api/customers', ceoRouter)
 
 if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('react-bank-system/build'));
+    app.use(express.static(path.join(__dirname,'react-bank-system','build')));
 
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, 'react-bank-system', 'build', 'index.html')); // relative path
