@@ -8,6 +8,7 @@ const Customer = () => {
     const [loaded, setLoaded] = useState(false)
     const [data, setData] = useState([])
     const [update, setUpdate] = useState(true)
+    const [attempt, setAttempt] = useState("")
 
     useEffect(() => {
             const fetchData = async () => {
@@ -19,6 +20,17 @@ const Customer = () => {
                 setData(data)
                 console.log(data)
                 const c = data.find(c => c.id === id);
+                if(loaded){
+                    if(c.balance !== customer.balance){
+                        setAttempt("Success! :)")
+                    }
+                    else{
+                        setAttempt("Failed :(")
+                    }
+                    setTimeout(() => {
+                        setAttempt("")
+                    }, 1000)
+                }
                 setCustomer(c)
                 setLoaded(true)
             }
@@ -86,6 +98,7 @@ const Customer = () => {
                                 </select>
                             </label>
                             <button className="cstm-btn" onClick={clickHandler}>Send Money</button>
+                            <div className={attempt !== "" ? "cstm-attempt" : null}><p style={{color: attempt === "Success! :)" ? "#c5ce21" : "coral"}}>{attempt}</p></div>
                         </form>
                     </div>
                 </div>

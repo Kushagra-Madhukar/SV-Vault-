@@ -308,6 +308,27 @@ thead{
     font-size: 1rem;
 }
 
+.cstm-attempt{
+    position: absolute;
+    color: #c5ce21;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    z-index: 70;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .cstm-attempt p{
+
+} */
+
 @media(max-width: 880px){
     .cstm-container{
         flex-direction: column;
