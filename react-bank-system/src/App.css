@@ -1,8 +1,5 @@
 .App {
   text-align: center;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   font-family: 'Ubuntu', sans-serif;
   background-color: rgb(247, 242, 242);
 }
@@ -10,6 +7,12 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {

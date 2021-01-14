@@ -36,7 +36,7 @@ function App() {
                 </div> */}
             </div>
         </header>
-        <main style={{marginBottom: "2em"}}>
+        <main >
           <Switch>
             <Route exact path="/">
               <Homepage/>
@@ -55,7 +55,7 @@ function App() {
             </Route>
           </Switch>
         </main>
-        <footer style={{backgroundColor: "khaki", position: "fixed", bottom: "0", width: "100%", padding: "0.5em", zIndex: "50"}}>
+        <footer style={{backgroundColor: "khaki", bottom: "0", width: "100%", padding: "0.5em 0", zIndex: "50", height: "30px"}}>
           <div>&copy; Copyright 2020 KushagraM :D</div>
         </footer>
     </div>
